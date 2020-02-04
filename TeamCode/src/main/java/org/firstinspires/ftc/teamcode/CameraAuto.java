@@ -48,23 +48,54 @@ public class CameraAuto extends LinearOpMode {
             telemetry.addData("Theoretical max FPS", phoneCam.getCurrentPipelineMaxFps());
             telemetry.update();
 
-            if (skyStoneDetector.getScreenPosition().x > 45) {
-                robot.forward(0.25, 150);
-            }
-            else if (skyStoneDetector.getScreenPosition().x < 30) {
-                robot.forward(-0.25, 150);
-                }
-            else {
-                robot.strafe(-0.5, 550);
-                robot.TurnLeft(0.5, 830);
-                robot.forward(0.5, 969);
-                robot.TurnLeft(0.25, 100);
-                robot.TurnLeft(0,100);
-                robot.Intake(0.5, 1000);
+            if (skyStoneDetector.getScreenPosition().x > 160) {
+                robot.forward(0.5, 669);
+                /*robot.forward(-0.5, 320);
+                robot.strafe(-0.5,1565);
+                robot.Intake(-0.70,450);
+                robot.forward(0.5,669);
+                robot.forward(0,100);
                 robot.Intake(0,100);
-                robot.TurnRight(0.5,125);
+                robot.strafe(0.5,700);
+                robot.forward(0.5,1000);
+                robot.forward(-0.5,500);
+                stop();*/
+            }
+            else if (skyStoneDetector.getScreenPosition().x < 140 ) {
+                robot.forward(-0.5, 320);
+                robot.strafe(-0.5, 1575);
+                robot.Intake(-0.85, 450);
+                robot.forward(0.5, 669);
+                robot.forward(0, 100);
+                robot.Intake(0, 100);
+                robot.strafe(0.5, 700);
+                robot.forward(0.5, 1000);
+                robot.Intake(0.5, 500);
+                robot.forward(-0.5, 600);
+                /*robot.TurnLeft(0.5, 890);
+                robot.strafe(-0.5, 700);
+                robot.forward(0.25,300);
+                robot.Intake(-0.75,450);
+                robot.strafe(0.5, 700);
+                robot.forward(-0.5, 1600);
+                robot.TurnLeft(0.5,900);
+                robot.Intake(0.75,250);
+                robot.strafe(0.5, 700);
+                stop();*/
+
+
+                /*robot.strafe(-0.5, 550);
+                robot.TurnLeft(0.5, 900);
+                robot.forward(0.5, 969);
+                robot.TurnLeft(0.25, 175);
+                robot.TurnLeft(0,100);
+                robot.forward(0.25, 250);
+                robot.Intake(0.70, 1000);
+                robot.Intake(0,100);
+                robot.forward(-0.25,250 );
+                robot.TurnRight(0.5,175);
                 robot.TurnRight(0,100);
-                robot.forward(-0.5, 469);
+                robot.forward(-0.5, 669);
 
                 robot.strafe(0.5,1500);
                 robot.Intake(-0.5, 750);
@@ -73,9 +104,24 @@ public class CameraAuto extends LinearOpMode {
                 robot.forward(-0.5, 50);
                 robot.rotateout(0.5, 250);
                 robot.virtualFourBar.toggleGripper();
-                robot.virtualFourBar.toggleGripper();a
+                robot.virtualFourBar.toggleGripper();
             */
-
+                }
+            else {
+                robot.strafe(0.25,500);
+                robot.forward(0.5,500);
+                /*robot.forward(-0.5, 800);
+                robot.forward(-0.5, 320);
+                robot.strafe(-0.5,1565);
+                robot.Intake(-0.70,450);
+                robot.forward(0.5,669);
+                robot.forward(0,100);
+                robot.Intake(0,100);
+                robot.strafe(0.5,700);
+                robot.forward(0.5,1000);
+                robot.Intake(0.5,500);
+                robot.forward(-0.5,500);
+                stop();*/
             }
             robot.forward(0,1000);
         }
